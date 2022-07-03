@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
     // MARK: - Private properties
     
     private let userName = "Aleksei"
-    private let passwordUser = "Swiftbook"
+    private let passwordUser = "Swift"
     
     // MARK: - Override Methods
     
