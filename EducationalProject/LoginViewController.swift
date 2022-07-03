@@ -24,17 +24,14 @@ class LoginViewController: UIViewController {
     // MARK: - Override Methods
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if fieldUserName.text != userName {
+        if fieldUserName.text != userName || fieldPassword.text != passwordUser {
             showAlert(
-                with: "Invalid login or password",
-                and: "Please, enter corrent login and password"
+                title: "Invalid login or password",
+                message: "Please, enter corrent login and password"
             )
-        } else if fieldPassword.text != passwordUser {
-            showAlert(
-                with: "Invalid login or password",
-                and: "Please, enter corrent login and password"
-            )
-        return
+            self.fieldUserName.text = nil
+            self.fieldPassword.text = nil
+            return
         }
         
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
@@ -57,10 +54,11 @@ class LoginViewController: UIViewController {
     // MARK: - IB Actions AllertControllers
     
     @IBAction func showAlertUserName(_ sender: UIButton) {
-        if sender == foggotUserName {
-            showAlert(with: "Oooh?!", and: "Your name is \(userName)")
-        } else if sender == foggotPassword {
-            showAlert(with: "Oops?!", and: "Your password is \(passwordUser)")
+        switch sender {
+        case foggotUserName:
+            showAlert(title: "Oooh?!", message: "Your name is \(userName)")
+        default:
+            showAlert(title: "Oops?!", message: "Your password is \(passwordUser)")
         }
     }
 }
@@ -69,7 +67,7 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController {
     
-    private func showAlert(with title: String, and message: String) {
+    private func showAlert(title: String, message: String) {
         let alert = UIAlertController(
             title: title,
             message: message,

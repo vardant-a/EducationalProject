@@ -149,7 +149,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" largeTitleDisplayMode="always" id="gLe-g5-s2Q"/>
                     <connections>
-                        <outlet property="welcomeMessage" destination="VMC-Gj-6Sv" id="gZD-9a-giV"/>
+                        <outlet property="welcomeMessage" destination="VMC-Gj-6Sv" id="aRF-HW-5FF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iBi-um-sVz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

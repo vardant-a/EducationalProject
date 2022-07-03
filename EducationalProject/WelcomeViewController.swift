@@ -22,7 +22,7 @@ class WelcomeViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        welcomeMessage.text = "Welcome, \(userName!)!"
+        welcomeMessage.text = "Welcome, \(userName ?? "user")!"
     }
     
     // MARK: - IB Actions
