@@ -12,6 +12,10 @@ class LoginViewController: UIViewController {
     @IBOutlet var fieldUserName: UITextField!
     @IBOutlet var fieldPassword: UITextField!
     
+    @IBOutlet var foggotUserName: UIButton!
+    @IBOutlet var foggotPassword: UIButton!
+    
+    
     // MARK: - Private properties
     
     private let userName = "Aleksei"
@@ -20,10 +24,21 @@ class LoginViewController: UIViewController {
     // MARK: - Override Methods
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else {
-            return
+        if fieldUserName.text != userName {
+            showAlert(
+                with: "Invalid login or password",
+                and: "Please, enter corrent login and password"
+            )
+        } else if fieldPassword.text != passwordUser {
+            showAlert(
+                with: "Invalid login or password",
+                and: "Please, enter corrent login and password"
+            )
+        return
         }
-        welcomeVC.userName = self.fieldUserName.text ?? "user"
+        
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.userName = fieldUserName.text ?? "user"
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -32,31 +47,7 @@ class LoginViewController: UIViewController {
         }
     
     //MARK: - IB Actions
-    
-    @IBAction func singInAttempt(_ sender: UIStoryboardSegue) {
-        guard let login = fieldUserName.text, !login.isEmpty else {
-            showAlertAuthError(
-                with: "Invalid login or password",
-                and: "Please, enter corrent login and password"
-            )
-            return
-        }
-        guard let password = fieldUserName.text, !login.isEmpty else {
-            showAlertAuthError(
-                with: "Invalid login or password",
-                and: "Please, enter corrent login and password"
-            )
-            return
-        }
-                
-//        if self.fieldUserName.text != userName || self.fieldPassword.text != passwordUser {
-//            showAlertAuthError(
-//                with: "Invalid login or password",
-//                and: "Please, enter corrent login and password"
-//            )
-//        }
-    }
-    
+        
     @IBAction func unwind(for seque: UIStoryboardSegue) {
         guard seque.source is WelcomeViewController else { return }
         self.fieldUserName.text = nil
@@ -66,11 +57,11 @@ class LoginViewController: UIViewController {
     // MARK: - IB Actions AllertControllers
     
     @IBAction func showAlertUserName(_ sender: UIButton) {
-        showAllert(with: "Oooh?!", and: "Your name is Aleksei")
-    }
-    
-    @IBAction func showAlert(_ sender: UIButton) {
-        showAllert(with: "Oops?!", and: "Your password is Swift")
+        if sender == foggotUserName {
+            showAlert(with: "Oooh?!", and: "Your name is \(userName)")
+        } else if sender == foggotPassword {
+            showAlert(with: "Oops?!", and: "Your password is \(passwordUser)")
+        }
     }
 }
 
@@ -78,19 +69,7 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController {
     
-    private func showAlertAuthError(with title: String, and message: String) {
-        let authorizationError = UIAlertController(
-            title: title,
-            message: message,
-            preferredStyle: .alert
-        )
-        let okButton = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-        
-        authorizationError.addAction(okButton)
-        present(authorizationError, animated: true, completion: nil)
-    }
-    
-    private func showAllert(with title: String, and message: String) {
+    private func showAlert(with title: String, and message: String) {
         let alert = UIAlertController(
             title: title,
             message: message,
