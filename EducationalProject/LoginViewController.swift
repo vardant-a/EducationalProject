@@ -20,7 +20,9 @@ class LoginViewController: UIViewController {
     // MARK: - Override Methods
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        guard let welcomeVC = segue.destination as? WelcomeViewController else {
+            return
+        }
         welcomeVC.userName = self.fieldUserName.text ?? "user"
     }
     
@@ -32,12 +34,27 @@ class LoginViewController: UIViewController {
     //MARK: - IB Actions
     
     @IBAction func singInAttempt(_ sender: UIStoryboardSegue) {
-        if self.fieldUserName.text != userName || self.fieldPassword.text != passwordUser {
+        guard let login = fieldUserName.text, !login.isEmpty else {
             showAlertAuthError(
                 with: "Invalid login or password",
                 and: "Please, enter corrent login and password"
             )
+            return
         }
+        guard let password = fieldUserName.text, !login.isEmpty else {
+            showAlertAuthError(
+                with: "Invalid login or password",
+                and: "Please, enter corrent login and password"
+            )
+            return
+        }
+                
+//        if self.fieldUserName.text != userName || self.fieldPassword.text != passwordUser {
+//            showAlertAuthError(
+//                with: "Invalid login or password",
+//                and: "Please, enter corrent login and password"
+//            )
+//        }
     }
     
     @IBAction func unwind(for seque: UIStoryboardSegue) {
