@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E284202286F20980000F2D0 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E284201286F20980000F2D0 /* GradientView.swift */; };
+		0E2842062871C22A0000F2D0 /* LogScreenView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E2842052871C22A0000F2D0 /* LogScreenView.storyboard */; };
 		0EE53981286E2E6D00C242EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE53980286E2E6D00C242EE /* AppDelegate.swift */; };
 		0EE53983286E2E6D00C242EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE53982286E2E6D00C242EE /* SceneDelegate.swift */; };
 		0EE53985286E2E6D00C242EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE53984286E2E6D00C242EE /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E284201286F20980000F2D0 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		0E2842052871C22A0000F2D0 /* LogScreenView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogScreenView.storyboard; sourceTree = "<group>"; };
 		0EE5397D286E2E6D00C242EE /* EducationalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EducationalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EE53980286E2E6D00C242EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EE53982286E2E6D00C242EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,10 +62,12 @@
 			children = (
 				0EE53980286E2E6D00C242EE /* AppDelegate.swift */,
 				0EE53982286E2E6D00C242EE /* SceneDelegate.swift */,
-				0EE53984286E2E6D00C242EE /* ViewController.swift */,
-				0EE53986286E2E6D00C242EE /* Main.storyboard */,
-				0EE53989286E2E6F00C242EE /* Assets.xcassets */,
 				0EE5398B286E2E6F00C242EE /* LaunchScreen.storyboard */,
+				0E2842052871C22A0000F2D0 /* LogScreenView.storyboard */,
+				0EE53986286E2E6D00C242EE /* Main.storyboard */,
+				0EE53984286E2E6D00C242EE /* ViewController.swift */,
+				0E284201286F20980000F2D0 /* GradientView.swift */,
+				0EE53989286E2E6F00C242EE /* Assets.xcassets */,
 				0EE5398E286E2E6F00C242EE /* Info.plist */,
 			);
 			path = EducationalProject;
@@ -125,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E2842062871C22A0000F2D0 /* LogScreenView.storyboard in Resources */,
 				0EE5398D286E2E6F00C242EE /* LaunchScreen.storyboard in Resources */,
 				0EE5398A286E2E6F00C242EE /* Assets.xcassets in Resources */,
 				0EE53988286E2E6D00C242EE /* Main.storyboard in Resources */,
@@ -140,6 +147,7 @@
 			files = (
 				0EE53985286E2E6D00C242EE /* ViewController.swift in Sources */,
 				0EE53981286E2E6D00C242EE /* AppDelegate.swift in Sources */,
+				0E284202286F20980000F2D0 /* GradientView.swift in Sources */,
 				0EE53983286E2E6D00C242EE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,18 +301,19 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "Vardant-Coding.EducationalProject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,18 +330,19 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "Vardant-Coding.EducationalProject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
