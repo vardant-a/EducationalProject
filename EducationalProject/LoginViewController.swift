@@ -31,8 +31,13 @@ class LoginViewController: UIViewController {
     
     //MARK: - IB Actions
     
-    @IBAction func singInAttempt(_ sender: Any) {
-        if self.fieldUserName.text != userName || self.fieldPassword.text != passwordUser { showAllertAuthorizationError() }
+    @IBAction func singInAttempt(_ sender: UIStoryboardSegue) {
+        if self.fieldUserName.text != userName || self.fieldPassword.text != passwordUser {
+            showAlertAuthError(
+                with: "Invalid login or password",
+                and: "Please, enter corrent login and password"
+            )
+        }
     }
     
     @IBAction func unwind(for seque: UIStoryboardSegue) {
@@ -43,41 +48,40 @@ class LoginViewController: UIViewController {
     
     // MARK: - IB Actions AllertControllers
     
-    @IBAction func showAllertUserName(_ sender: UIButton) {
-        let alert = UIAlertController(
-            title: "Oops?",
-            message: "Your name is Aleksei",
-            preferredStyle: .alert
-        )
-        let okButton = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-        
-        alert.addAction(okButton)
-        present(alert, animated: true, completion: nil)
+    @IBAction func showAlertUserName(_ sender: UIButton) {
+        showAllert(with: "Oooh?!", and: "Your name is Aleksei")
     }
     
-    @IBAction func showAllertUserPassword(_ sender: UIButton) {
-        let alert = UIAlertController(
-            title: "Oops?",
-            message: "Your password is Swift",
-            preferredStyle: .alert
-        )
-        let okButton = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-        
-        alert.addAction(okButton)
-        present(alert, animated: true, completion: nil)
+    @IBAction func showAlert(_ sender: UIButton) {
+        showAllert(with: "Oops?!", and: "Your password is Swift")
     }
+}
+
+// MARK: - UIAlertController
+
+extension LoginViewController {
     
-    // MARK: - Private Methods
-    
-    private func showAllertAuthorizationError() {
+    private func showAlertAuthError(with title: String, and message: String) {
         let authorizationError = UIAlertController(
-            title: "Invalid login or password",
-            message: "Please, enter corrent login and password",
+            title: title,
+            message: message,
             preferredStyle: .alert
         )
         let okButton = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
         
         authorizationError.addAction(okButton)
         present(authorizationError, animated: true, completion: nil)
+    }
+    
+    private func showAllert(with title: String, and message: String) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        let okButton = UIAlertAction(title: "Ok", style: .default)
+        
+        alert.addAction(okButton)
+        present(alert, animated: true, completion: nil)
     }
 }

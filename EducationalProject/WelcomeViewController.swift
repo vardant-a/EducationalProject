@@ -24,7 +24,6 @@ class WelcomeViewController: ViewController {
 
         welcomeMessage.text = "Welcome, \(userName!)!"
     }
-
     
     // MARK: - IB Actions
     @IBAction func logOut() {
