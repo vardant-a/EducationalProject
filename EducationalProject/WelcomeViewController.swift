@@ -10,12 +10,21 @@ import UIKit
 class WelcomeViewController: ViewController {
     
     //MARK: - IB Outlets
+    
     @IBOutlet var welcomeMessage: UILabel!
     
+    //MARK: - Public Properties
+    
+    var userName: String!
+    
     // MARK: - Override Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        welcomeMessage.text = "Welcome, \(userName!)!"
     }
+
     
     // MARK: - IB Actions
     @IBAction func logOut() {
