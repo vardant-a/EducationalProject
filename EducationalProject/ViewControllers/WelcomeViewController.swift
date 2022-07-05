@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WelcomeViewController: ViewController {
+class WelcomeViewController: UIViewController {
     
     //MARK: - IB Outlets
     
@@ -15,18 +15,13 @@ class WelcomeViewController: ViewController {
     
     //MARK: - Public Properties
     
-    var userName: String!
+    var user = ""
     
     // MARK: - Override Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        welcomeMessage.text = "Welcome, \(userName ?? "user")!"
-    }
-    
-    // MARK: - IB Actions
-    @IBAction func logOut() {
-        dismiss(animated: true)
+        
+        welcomeMessage.text = "Welcome, \(user)!"
     }
 }
