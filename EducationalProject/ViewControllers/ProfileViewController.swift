@@ -9,18 +9,25 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    @IBOutlet var testName: UILabel!
+    @IBOutlet var userImage: UIImageView!
+    @IBOutlet var userInfo: UILabel!
     @IBOutlet var aboutMyself: UILabel!
     
-    var firstName = ""
-    var lastName = ""
-    var age = 18
-    var littleAboutMyself = ""
-    
+    let alex = Person(
+        firstName: "Картошка",
+        lastName: "Пельмешка",
+        age: 18,
+        info: [.pets : "Доберман"],
+        littleAboutMyself: """
+            I am a 3rd year graduate student of Tomsk State University,
+            at the Department of Optics and Spectroscopy.
+        """
+    )
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        testName.text = "Your name is \(firstName)\(lastName). You are \(age) years old"
-        aboutMyself.text = littleAboutMyself
+        userImage.image = UIImage(named: "Lex")
+        userInfo.text = "My name is \(alex.firstName) \(alex.lastName). I`m \(alex.age) years old"
+        aboutMyself.text = alex.littleAboutMyself
     }
 }

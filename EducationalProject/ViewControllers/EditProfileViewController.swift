@@ -10,8 +10,8 @@ import UIKit
 class EditProfileViewController: UIViewController {
     @IBOutlet var imageUsers: UIImageView!
     
-    @IBOutlet var firstName: UITextField!
-    @IBOutlet var lastName: UITextField!
+    @IBOutlet var firstNameTextField: UITextField!
+    @IBOutlet var lastNameTextField: UITextField!
     
     @IBOutlet var ageUsers: UILabel!
     
@@ -19,15 +19,19 @@ class EditProfileViewController: UIViewController {
     
     @IBOutlet var sexIndicator: UISegmentedControl!
     
-    
+    var firstName: String!
+    var lastName: String!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         imageUsers.image = UIImage(named: "avatar")
     }
     
-//    @IBAction func editAge() {
-//        ageUsers.text = String(format: "%.0f", ageSliders.value)
-//    }
+    @IBAction func editAge() {
+        ageUsers.text = String(format: "%.0f", ageSliders.value)
+        firstNameTextField.text = firstName
+        lastNameTextField.text = lastName
+    }
     
     @IBAction func editCancel() {
         dismiss(animated: true)

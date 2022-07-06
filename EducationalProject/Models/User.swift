@@ -18,7 +18,7 @@ struct Person {
     var lastName: String
     var age: Int
     var info: [Info : String]
-    
+    var littleAboutMyself: String
     
     static func getInfoList() -> Person {
         Person(
@@ -26,11 +26,12 @@ struct Person {
             lastName: "Lokhin",
             age: 28,
             info: [
-                .photo : "avatar.fpeg",
+                .photo : "Lex",
                 .hobbies : "Спорт, IT технологии, прогулки",
-                .education : "Магистр Физики (звучит круто!)",
+                .education : "Магистр Физики",
                 .pets : "Собака"
-            ]
+            ],
+            littleAboutMyself: "About Myself"
         )
     }
 }
