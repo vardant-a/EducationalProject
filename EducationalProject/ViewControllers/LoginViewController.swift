@@ -15,14 +15,20 @@ class LoginViewController: UIViewController {
     
     // MARK: - Private properties
     
-    private let userName = "Aleksei"
-    private let passwordUser = "Swift"
+    private let user = User(
+        login: "admin",
+        password: "admin"
+    )
     
     // MARK: - Override Methods
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.user = userName
+        welcomeVC.user = user.login
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -40,7 +46,7 @@ class LoginViewController: UIViewController {
     // MARK: - IB Actions
     
     @IBAction func logInPressed() {
-        guard fieldUserName.text == userName, fieldPassword.text == passwordUser else {
+        guard fieldUserName.text == user.login, fieldPassword.text == user.password else {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please, enter corrent login and password",
@@ -53,8 +59,8 @@ class LoginViewController: UIViewController {
     
     @IBAction func showAlertLoginPassword(_ sender: UIButton) {
         sender.tag == 0
-            ? showAlert(title: "Oooh?!", message: "Your name is \(userName)")
-            : showAlert(title: "Oops?!", message: "Your password is \(passwordUser)")
+        ? showAlert(title: "Oooh?!", message: "Your name is \(user.login)")
+        : showAlert(title: "Oops?!", message: "Your password is \(user.password)")
     }
 }
 
