@@ -34,11 +34,10 @@ class LoginViewController: UIViewController {
         viewControllers.forEach { viewController in
             if let navigationVC = viewController as? UINavigationController {
                 guard let welcomeVC = navigationVC.topViewController as? WelcomeViewController else { return }
-                welcomeVC.user = user.person.firstName
+                welcomeVC.firstName = user.person.firstName
             }
         }
     }
-    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
             super .touchesBegan(touches, with: event)

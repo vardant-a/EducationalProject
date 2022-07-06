@@ -22,8 +22,8 @@ struct Person {
     
     static func getInfoList() -> Person {
         Person(
-            firstName: "Aлексей",
-            lastName: "Ефимов",
+            firstName: "Aleksei",
+            lastName: "Lokhin",
             age: 28,
             info: [
                 .photo : "avatar.fpeg",
@@ -37,7 +37,7 @@ struct Person {
 
 enum Info: String {
     case photo = "photo.jpeg"
-    case hobbies = "Увлечения"
-    case education = "Образование, специальность"
+    case hobbies = "hobbies"
+    case education = "Education, specialty"
     case pets = "Домашний петомец"
 }

@@ -96,7 +96,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ofH-Jc-cwx">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="6SL-e1-8ox" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="6SL-e1-8ox" customClass="TabBarController" customModule="EducationalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JBz-iE-15Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -442,6 +442,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="SdC-yq-Naw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="labelColor"/>
                     </navigationBar>
                     <connections>
                         <segue destination="OfN-Uc-aFF" kind="relationship" relationship="rootViewController" id="FkX-s1-Va3"/>
@@ -459,6 +460,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="nq6-tm-s1h">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="labelColor"/>
                     </navigationBar>
                     <connections>
                         <segue destination="DtX-kF-glR" kind="relationship" relationship="rootViewController" id="n78-Qe-wad"/>
@@ -476,6 +478,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="iTv-cd-rhm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="labelColor"/>
                     </navigationBar>
                     <connections>
                         <segue destination="O8W-kR-hMQ" kind="relationship" relationship="rootViewController" destinationCreationSelector="HomeViewController" id="fEk-5z-NwG"/>
@@ -513,6 +516,9 @@
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
