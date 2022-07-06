@@ -17,6 +17,7 @@ struct Person {
     var firstName: String
     var lastName: String
     var age: Int
+    var photo: String
     var info: [Info : String]
     var littleAboutMyself: String
     
@@ -25,8 +26,8 @@ struct Person {
             firstName: "Aleksei",
             lastName: "Lokhin",
             age: 28,
+            photo: "photo",
             info: [
-                .photo : "photo",
                 .hobbies : "Sports, IT technologies, walking, swimming, dog training",
                 .education : "Master in Physics",
                 .pets : "Doberman Ray"
@@ -37,7 +38,6 @@ struct Person {
 }
 
 enum Info: String {
-    case photo = "photo.jpeg"
     case hobbies = "hobbies"
     case education = "Education, specialty"
     case pets = "Home pet"

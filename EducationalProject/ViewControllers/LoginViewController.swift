@@ -32,9 +32,16 @@ class LoginViewController: UIViewController {
         guard let viewControllers = tabBarVC.viewControllers else { return }
         
         viewControllers.forEach { viewController in
-            if let navigationVC = viewController as? UINavigationController {
-                guard let welcomeVC = navigationVC.topViewController as? WelcomeViewController else { return }
-                welcomeVC.firstName = user.person.firstName
+            if let firstVC = viewController as? UINavigationController {
+                guard let welcomeVC = firstVC.topViewController as? WelcomeViewController else { return }
+                welcomeVC.userName = user.person.firstName
+            } else if let secondVC = viewController as? UINavigationController {
+                guard let profileVC = secondVC.topViewController as? ProfileViewController else { return }
+                profileVC.user.firstName = user.person.firstName
+                profileVC.user.lastName = user.person.lastName
+            } else if let thirdVC = viewController as? UINavigationController {
+                guard let resumeVC = thirdVC.topViewController as? ResumeViewController else { return }
+//                resumeVC.user =
             }
         }
     }

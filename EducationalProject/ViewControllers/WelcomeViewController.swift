@@ -15,12 +15,12 @@ class WelcomeViewController: UIViewController {
     
     //MARK: - Public Properties
     
-    var firstName = ""
+    var userName = "user"
     
     // MARK: - Override Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeMessage.text = "Welcome, \(firstName)!"
+        welcomeMessage.text = "Welcome, \(userName)!"
     }
 }
