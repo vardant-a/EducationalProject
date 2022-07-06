@@ -9,6 +9,8 @@ import UIKit
 
 class SettingViewController: UIViewController {
 
+    @IBOutlet var switchTheme: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

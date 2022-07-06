@@ -26,7 +26,7 @@ struct Person {
             lastName: "Lokhin",
             age: 28,
             info: [
-                .photo : "Lex",
+                .photo : "photo.jpeg",
                 .hobbies : "Спорт, IT технологии, прогулки",
                 .education : "Магистр Физики",
                 .pets : "Собака"
@@ -42,3 +42,19 @@ enum Info: String {
     case education = "Education, specialty"
     case pets = "Домашний петомец"
 }
+
+let test = Person(
+    firstName: "1",
+    lastName: "2",
+    age: 3,
+    info: [
+        .photo : "Lex",
+        .hobbies : "Спорт, IT технологии, прогулки",
+        .education : "Магистр Физики",
+        .pets : "Собака"
+    ],
+    littleAboutMyself: "4"
+)
+
+
+
