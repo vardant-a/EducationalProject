@@ -8,5 +8,7 @@
 import UIKit
 
 class SettingViewController: UIViewController {
-
+    
+    @IBOutlet var darkMod: UISwitch!
+    
 }

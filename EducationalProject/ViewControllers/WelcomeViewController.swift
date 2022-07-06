@@ -21,7 +21,6 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         welcomeMessage.text = "Welcome, \(user)!"
     }
 }

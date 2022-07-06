@@ -19,21 +19,16 @@ class EditProfileViewController: UIViewController {
     
     @IBOutlet var sexIndicator: UISegmentedControl!
     
-    var editUsers = Person(
-        
-        firstName: "Aleksei",
-        lastName: "Efimof",
-        sex: 1,
-        age: 18
-    )
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        imageUsers.image = UIImage(named: "avatar")
     }
-    @IBAction func editAge() {
-        ageUsers.text = String(format: "%.0f", ageSliders.value)
-    }
+    
+//    @IBAction func editAge() {
+//        ageUsers.text = String(format: "%.0f", ageSliders.value)
+//    }
+    
     @IBAction func editCancel() {
         dismiss(animated: true)
     }

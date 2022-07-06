@@ -16,8 +16,9 @@ class LoginViewController: UIViewController {
     // MARK: - Private properties
     
     private let user = User(
-        login: "admin",
-        password: "admin"
+        login: "1",
+        password: "1",
+        person: Person.getInfoList()
     )
     
     // MARK: - Override Methods
@@ -27,9 +28,17 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.user = user.login
+        guard let tabBarVC = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarVC.viewControllers else { return }
+        
+        viewControllers.forEach { viewController in
+            if let navigationVC = viewController as? UINavigationController {
+                guard let welcomeVC = navigationVC.topViewController as? WelcomeViewController else { return }
+                welcomeVC.user = user.person.firstName
+            }
+        }
     }
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
             super .touchesBegan(touches, with: event)
@@ -54,7 +63,8 @@ class LoginViewController: UIViewController {
             )
             return
         }
-        performSegue(withIdentifier: "showWelcomeView", sender: self)
+        
+        performSegue(withIdentifier: "showViews", sender: self)
     }
     
     @IBAction func showAlertLoginPassword(_ sender: UIButton) {
