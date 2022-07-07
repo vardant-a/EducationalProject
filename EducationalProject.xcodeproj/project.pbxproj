@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0E1BA21D2876110F00B35710 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BA21C2876110F00B35710 /* TabBarViewController.swift */; };
-		0E1BA2212876273700B35710 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BA2202876273700B35710 /* SettingViewController.swift */; };
 		0E28420A2871D2420000F2D0 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2842092871D2420000F2D0 /* WelcomeViewController.swift */; };
 		0E28420C2871E3C80000F2D0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E28420B2871E3C80000F2D0 /* LoginViewController.swift */; };
 		0E3DA2C82874D2D00012C999 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3DA2C72874D2D00012C999 /* ProfileViewController.swift */; };
@@ -23,7 +22,6 @@
 
 /* Begin PBXFileReference section */
 		0E1BA21C2876110F00B35710 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		0E1BA2202876273700B35710 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		0E2842092871D2420000F2D0 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		0E28420B2871E3C80000F2D0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0E3DA2C72874D2D00012C999 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 				0E3DA2CB2874DA500012C999 /* ResumeViewController.swift */,
 				0E3DA2C72874D2D00012C999 /* ProfileViewController.swift */,
 				0E1BA21C2876110F00B35710 /* TabBarViewController.swift */,
-				0E1BA2202876273700B35710 /* SettingViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -192,7 +189,6 @@
 				0E28420C2871E3C80000F2D0 /* LoginViewController.swift in Sources */,
 				0E28420A2871D2420000F2D0 /* WelcomeViewController.swift in Sources */,
 				0EE53981286E2E6D00C242EE /* AppDelegate.swift in Sources */,
-				0E1BA2212876273700B35710 /* SettingViewController.swift in Sources */,
 				0E3DA2CC2874DA500012C999 /* ResumeViewController.swift in Sources */,
 				0EE53983286E2E6D00C242EE /* SceneDelegate.swift in Sources */,
 				0E3DA2D02874E3120012C999 /* User.swift in Sources */,

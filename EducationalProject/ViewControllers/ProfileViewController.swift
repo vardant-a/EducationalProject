@@ -15,6 +15,7 @@ class ProfileViewController: UIViewController {
     
     var user: Person!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         userImage.image = UIImage(named: user.photo)
@@ -25,6 +26,6 @@ class ProfileViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let resumeVC = segue.destination as? ResumeViewController else { return }
-        resumeVC.user = user
+        resumeVC.user = Person.getInfoList().info
     }
 }
