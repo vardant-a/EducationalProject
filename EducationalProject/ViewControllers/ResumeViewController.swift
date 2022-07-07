@@ -14,11 +14,19 @@ class ResumeViewController: UIViewController {
     @IBOutlet var homePet: UILabel!
     
     var user: [Info : String]!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-  // Проблема с вытаскиванием элементов словаря
+        for keyOfElement in user.keys {
+            switch keyOfElement {
+            case .education:
+                education.text = user[keyOfElement]
+            case .hobbie:
+                hobbies.text = user[keyOfElement]
+            case .pets:
+                homePet.text = user[keyOfElement]
+            }
+        }
     }
     
     @IBAction func singOut() {

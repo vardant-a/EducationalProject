@@ -36,7 +36,7 @@ struct Person {
             cityLife: "Moskow",
             info: [
                 .hobbie : "Sports, IT technologies, walking, swimming, dog training",
-                .education : "Master in Physics",
+                .education : "3rd year PhD student, Optics and Spectroscopy",
                 .pets : "Doberman Ray"
             ],
             littleAboutMyself: "I am a 3rd year graduate student of Tomsk State University, at the Department of Optics and Spectroscopy. A physicist by education, I am engaged in research work: from setting up and implementing an experiment, to writing articles and speaking at conferences."
