@@ -15,11 +15,7 @@ class LoginViewController: UIViewController {
     
     // MARK: - Private properties
     
-    private var user = User(
-        login: "1",
-        password: "1",
-        person: Person.getInfoList()
-    )
+    private var user = User.getUserData()
     
     // MARK: - Override Methods
     

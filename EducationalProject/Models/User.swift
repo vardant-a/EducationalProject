@@ -10,6 +10,14 @@ struct User {
     let login: String
     let password: String
     let person: Person
+    
+    static func getUserData() -> User {
+        User(
+            login: "admin",
+            password: "admin",
+            person: Person.getInfoList()
+        )
+    }
 }
 
 struct Person {
@@ -27,7 +35,7 @@ struct Person {
             photo: "photo",
             cityLife: "Moskow",
             info: [
-                .hobbies : "Sports, IT technologies, walking, swimming, dog training",
+                .hobbie : "Sports, IT technologies, walking, swimming, dog training",
                 .education : "Master in Physics",
                 .pets : "Doberman Ray"
             ],
@@ -36,8 +44,8 @@ struct Person {
     }
 }
 
-enum Info: String {
-    case hobbies = "hobbies"
-    case education = "Education, specialty"
-    case pets = "Home pet"
+enum Info {
+    case hobbie
+    case education
+    case pets
 }
