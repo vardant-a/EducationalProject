@@ -9,4 +9,11 @@ import UIKit
 
 class ResumeViewController: UIViewController {
     
+    var user: Person!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    
+    }
 }

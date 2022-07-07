@@ -13,26 +13,25 @@ struct User {
 }
 
 struct Person {
-    
-    var firstName: String
-    var lastName: String
+    var name: String
     var age: Int
     var photo: String
+    var cityLife: String
     var info: [Info : String]
     var littleAboutMyself: String
     
     static func getInfoList() -> Person {
         Person(
-            firstName: "Aleksei",
-            lastName: "Lokhin",
+            name: "Aleksei",
             age: 28,
             photo: "photo",
+            cityLife: "Moskow",
             info: [
                 .hobbies : "Sports, IT technologies, walking, swimming, dog training",
                 .education : "Master in Physics",
                 .pets : "Doberman Ray"
             ],
-            littleAboutMyself: "About Myself"
+            littleAboutMyself: "I am a 3rd year graduate student of Tomsk State University, at the Department of Optics and Spectroscopy. A physicist by education, I am engaged in research work: from setting up and implementing an experiment, to writing articles and speaking at conferences."
         )
     }
 }

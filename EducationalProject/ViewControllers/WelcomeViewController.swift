@@ -15,12 +15,17 @@ class WelcomeViewController: UIViewController {
     
     //MARK: - Public Properties
     
-    var userName = "user"
+    var user: Person!
     
     // MARK: - Override Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeMessage.text = "Welcome, \(userName)!"
+        welcomeMessage.text = "Welcome, \(user.name)!"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let profileVC = segue.destination as? ProfileViewController else { return }
+        profileVC.user = user
     }
 }
